@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  /* background-color: #212321; */
+}
+
+#navbar {
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  padding: 3px;
+  background-color: lightcyan;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 75px;
+  border-radius: 12%;
+}
+
+#left {
+  margin-left: 22px;
+  /* border: 1px solid aliceblue; */
+  display: flex;
+  gap: 23px;
+}
+
+#right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 23%;
+  margin: 0 34px;
+  font-size: 20px;
+}
+
+
+
+
+
+#navbar2{
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  padding: 3px;
+  /* background-color: grey; */
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+
+#leftNav2 {
+  width: 25%;
+  /* border:1px solid red; */
+  display: flex;
+  gap : 33px;
+  align-items: center;
+  margin-left : 12px;
+}
+
+#leftNav2 i {
+  font-size: 60px;
+  color : lightcyan;
+}
+
+#midNav2{
+  width: 50%;
+  height: inherit;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+
+#midNav2 a{
+  font-size : 23px;
+  padding: 12px;
+  text-decoration: none;
+  color : Black;
+}
+
+#rightNav2{
+  display :flex;
+  text-align: center;
+  align-items : center;
+  justify-content: space-around;
+  width: 25%;
+  height: inherit;
+}
+
+#rightNav2 p{
+  font-size : 24px;
+}
+
+#rightNav2 i {
+  font-size : 33px;
+}
+
+
+#contentSection{
+  width: 100%;
+  height: 500px; 
+  /* border : 1px solid red; */
+  display: flex;
+}
+
+#leftContent{
+  width:50%;
+  height: 500px; 
+  /* border: 1px solid blue; */
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  color :white;
+  background-color: lightskyblue;
+}
+
+#leftContentHeading{
+  display: flex;
+  align-items:center;
+  justify-content: start;
+  /* border: 1px solid black; */
+  height: 300px;
+  margin-left: 12px;
+}
+
+#lcf{
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  /* border: 2px solid red; */
+  
+}
+
+#rightContent{
+  width: 50%;
+  /* border: 2px solid red; */
+}
+
+#rightContent img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,63 @@
+*{
+  margin : 0;
+  padding : 0;
+  box-sizing: border-box;
+}
+
+
+html,body{
+  width : 100vw;
+  height : 100vh;
+}
+
+#container{
+  height: 100%;
+  width: 100%;
+  background-color: #212121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main{
+  height: 80%;
+  width: 50%;
+  background-color: aquamarine;
+  text-align : center;
+}
+
+.coverPic{
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.profilePic{
+  width : 130px;
+  object-fit: cover;
+  margin-top : -48px;
+  border-radius : 50%;
+}
+
+#information{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#information p {
+  margin-left : 2%;
+  opacity: 0.5;
+}
+
+#informationDown{
+  display: flex;
+  margin-top: 5%;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid black;
+
+}
+
+.elems{
+  margin-top: 5%;
+}

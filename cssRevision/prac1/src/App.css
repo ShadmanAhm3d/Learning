@@ -1,0 +1,29 @@
+*{
+  margin:0 ;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+html,body{
+  width: 100vw;
+  height: 100vh;
+}
+
+#main{
+  width: 100vw;
+  height: 100vh;
+  background-color: #212121;
+}
+
+#bottom{
+  width:100vw;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bottom button{
+  margin : 3%;
+  padding: 2px;
+}
