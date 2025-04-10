@@ -1,0 +1,48 @@
+--GROUP BY PRACTISE SESSION 
+--DEFINATION AND USE CASE 
+
+-- ✅ Group By ka real kaam:
+
+--     "Similar values ko group karna."
+
+-- Toh jab tum GROUP BY lagate ho,
+-- toh SQL engine sab rows ko group kar deta hai based on specified column(s). 
+-- Uske baad tum har group ke upar kuch operation karte ho — aur usually yeh 
+-- operation hota hai: aggregate function.
+
+
+
+
+CREATE TABLE Sales (
+    sale_id SERIAL PRIMARY KEY,
+    salesperson VARCHAR(100),
+    region VARCHAR(50),
+    product VARCHAR(100),
+    quantity INT,
+    amount NUMERIC(10, 2),
+    sale_date DATE
+);
+
+-- Sample Data
+INSERT INTO Sales (salesperson, region, product, quantity, amount, sale_date) VALUES
+('Amit', 'North', 'Laptop', 2, 120000, '2024-01-05'),
+('Amit', 'North', 'Mouse', 5, 2500, '2024-01-06'),
+('Sneha', 'South', 'Keyboard', 3, 4500, '2024-01-07'),
+('Sneha', 'South', 'Laptop', 1, 60000, '2024-01-10'),
+('Raj', 'West', 'Mouse', 10, 5000, '2024-01-15'),
+('Raj', 'West', 'Keyboard', 2, 3000, '2024-01-18'),
+('Amit', 'North', 'Keyboard', 1, 1500, '2024-01-20'),
+('Sneha', 'South', 'Mouse', 2, 1000, '2024-01-22');
+
+-->>>>Q1. Har salesperson ne total kitne products beche?
+SELECT salesperson , SUM(quantity) AS total_quantity
+FROM Sales
+GROUP BY salesperson;
+
+--Har region mein total sales amount kitna hua?
+SELECT region , SUM(amount) as Total
+FROM Sales
+GROUP BY region
+ORDER BY Total ASC
+
+

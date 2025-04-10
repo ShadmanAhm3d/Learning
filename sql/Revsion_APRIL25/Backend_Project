@@ -1,0 +1,57 @@
+SELECT * FROM users;
+ALTER TABLE posts ADD COLUMN description TEXT;
+-- Already added: ALTER TABLE posts ADD COLUMN category_post VARCHAR;
+SELECT * FROM posts;
+SELECT * FROM images_for_post;
+
+SELECT column_name
+FROM information_schema.columns
+WHERE table_schema = 'public' AND table_name = 'posts';
+-- USERS TABLE
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL,
+    age INTEGER,
+    adhar_number TEXT UNIQUE,
+    phone_number TEXT UNIQUE,
+    category_main TEXT,
+    profile_picture TEXT,
+    location TEXT,
+    address TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- POSTS TABLE
+CREATE TABLE posts (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    text TEXT,
+    location TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- IMAGES FOR POST TABLE
+CREATE TABLE images_for_post (
+    id SERIAL PRIMARY KEY,
+    post_id INTEGER NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
+    image_url TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+SELECT u.name, u.email ,p.category_post AS Category , p.user_id,p.id AS PostID , p.text AS description ,i.image_url AS ImageURL , i.post_id as ImageTOpostID
+FROM posts p 
+LEFT JOIN images_for_post i ON p.id = i.post_id
+INNER JOIN users u ON p.user_id = u.id;
+
+
+SELECT * FROM posts
+where category_post = 'Plumber';
+
+
+
+
+
